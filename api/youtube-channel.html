@@ -18,6 +18,73 @@
         .text-youtube { color: var(--color-youtube); }
         .bg-youtube { background-color: var(--color-youtube); }
         .hover\:bg-opacity-80:hover { opacity: 0.8; }
+        
+        /* Simple icons */
+        .icon-youtube {
+            display: inline-block;
+            width: 32px;
+            height: 24px;
+            background-color: var(--color-youtube);
+            border-radius: 6px;
+            position: relative;
+        }
+        .icon-youtube::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            border-left: 10px solid white;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            transform: translate(-50%, -50%);
+        }
+        
+        .icon-check {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .icon-check::before {
+            content: "✓";
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        .icon-chart {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-chart::before {
+            content: "📈";
+            font-size: 24px;
+        }
+        
+        .icon-stack {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-stack::before {
+            content: "⚄";
+            color: var(--color-accent);
+            font-size: 24px;
+        }
+        
+        .icon-bulb {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-bulb::before {
+            content: "💡";
+            font-size: 24px;
+        }
     </style>
 </head>
 <body class="bg-dark text-gray-100 min-h-screen">
@@ -37,9 +104,7 @@
         <!-- Hero Section -->
         <div class="py-12 text-center">
             <div class="inline-block p-2 bg-youtube bg-opacity-20 rounded-lg mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-youtube" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                </svg>
+                <span class="icon-youtube"></span>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">YouTube Channel API</h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -62,27 +127,19 @@
                     <h2 class="text-2xl font-bold mb-4 text-accent">Key Features</h2>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Channel statistics and metadata retrieval</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Video listing and detailed content information</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Engagement metrics (views, likes, comments)</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Channel growth and trend analysis</span>
                         </li>
                     </ul>
@@ -180,9 +237,7 @@ try {
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
+                        <span class="icon-chart"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Analytics Dashboards</h3>
                     <p class="text-gray-300">
@@ -192,9 +247,7 @@ try {
                 
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-                        </svg>
+                        <span class="icon-stack"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Content Aggregation</h3>
                     <p class="text-gray-300">
@@ -204,9 +257,7 @@ try {
                 
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
+                        <span class="icon-bulb"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Competitive Analysis</h3>
                     <p class="text-gray-300">

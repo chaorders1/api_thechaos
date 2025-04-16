@@ -15,6 +15,37 @@
         .bg-accent { background-color: var(--color-accent); }
         .text-accent { color: var(--color-accent); }
         .hover\:bg-opacity-80:hover { opacity: 0.8; }
+        
+        /* Simple icons */
+        .icon-globe {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            position: relative;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            color: white;
+            text-align: center;
+            line-height: 32px;
+            font-size: 22px;
+        }
+        .icon-globe::before {
+            content: "↗";
+            transform: rotate(45deg);
+        }
+        
+        .icon-check {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .icon-check::before {
+            content: "✓";
+            color: var(--color-accent);
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="bg-dark text-gray-100 min-h-screen">
@@ -34,9 +65,7 @@
         <!-- Hero Section -->
         <div class="py-12 text-center">
             <div class="inline-block p-2 bg-accent bg-opacity-20 rounded-lg mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
+                <span class="icon-globe"></span>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Domain Rank Checker API</h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -59,27 +88,19 @@
                     <h2 class="text-2xl font-bold mb-4 text-accent">Key Features</h2>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Domain authority score and metrics</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Backlink analysis and quality assessment</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>SEO ranking factors and competitive metrics</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Historical trend data and performance tracking</span>
                         </li>
                     </ul>

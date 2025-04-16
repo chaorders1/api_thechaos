@@ -18,6 +18,74 @@
         .text-linkedin { color: var(--color-linkedin); }
         .bg-linkedin { background-color: var(--color-linkedin); }
         .hover\:bg-opacity-80:hover { opacity: 0.8; }
+        
+        /* Simple icons */
+        .icon-linkedin {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: var(--color-linkedin);
+            border-radius: 4px;
+            position: relative;
+            color: white;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            font-family: serif;
+        }
+        .icon-linkedin::after {
+            content: "in";
+            font-size: 20px;
+        }
+        
+        .icon-check {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .icon-check::before {
+            content: "✓";
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        .icon-bolt {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-bolt::before {
+            content: "⚡";
+            color: var(--color-accent);
+            font-size: 24px;
+        }
+        
+        .icon-shield {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-shield::before {
+            content: "🛡️";
+            font-size: 24px;
+        }
+        
+        .icon-code {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: relative;
+        }
+        .icon-code::before {
+            content: "<>";
+            color: var(--color-accent);
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="bg-dark text-gray-100 min-h-screen">
@@ -37,9 +105,7 @@
         <!-- Hero Section -->
         <div class="py-12 text-center">
             <div class="inline-block p-2 bg-linkedin bg-opacity-20 rounded-lg mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-linkedin" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
+                <span class="icon-linkedin"></span>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-4">LinkedIn Job API</h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -62,27 +128,19 @@
                     <h2 class="text-2xl font-bold mb-4 text-accent">Key Features</h2>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Job listings search with advanced filtering</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Detailed job descriptions and requirements</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Company information and employer profiles</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-accent mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
+                            <span class="icon-check"></span>
                             <span>Salary data and job market trends</span>
                         </li>
                     </ul>
@@ -175,9 +233,7 @@ try {
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+                        <span class="icon-bolt"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Real-time Data</h3>
                     <p class="text-gray-300">
@@ -187,9 +243,7 @@ try {
                 
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                        <span class="icon-shield"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Secure & Reliable</h3>
                     <p class="text-gray-300">
@@ -199,9 +253,7 @@ try {
                 
                 <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
                     <div class="text-accent mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
+                        <span class="icon-code"></span>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Developer Friendly</h3>
                     <p class="text-gray-300">
